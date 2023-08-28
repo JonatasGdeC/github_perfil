@@ -1,0 +1,37 @@
+.list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.listItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+    padding: 16px;
+    border: 1px solid rgba(0,0,0,0.1)
+}
+
+.listItemName, .listItemLanguage{
+    margin-right: 8px;
+}
+
+
+.listItemLink{
+    display: block;
+    background-color: var(--corPrincipal);
+    color: var(--corSecundaria);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all ease .3s;
+}
+
+.listItemLink:hover{
+    background-color: var(--corSecundaria);
+    color: var(--corPrincipal);
+}
