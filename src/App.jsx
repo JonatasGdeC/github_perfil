@@ -4,21 +4,30 @@ import ReposList from "./assets/components/ReposList";
 // import Formulario from "./assets/components/Formulario";
 
 function App() {
-  const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
   const [nomeUsuario, setNomeUsuario] = useState('')
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Formulário submetido. Valor do input:', inputValue);
+  }
+
+  const handleChange = (event) => {
+    setNomeUsuario(event.target.value);
+  };
+
   return (
     <>
-    <input type="text" onBlur={evento => setNomeUsuario(evento.target.value)} />
-    {nomeUsuario.length>4 &&(
-      <>
-        <Perfil nomeUsuario={nomeUsuario}/>
-        <ReposList nomeUsuario={nomeUsuario}/>
-      </>
-    )}
-      {/* {formularioEstaVisivel&&(
-        <Formulario/>
+      <form className="form" onSubmit={handleSubmit}>
+        <h1 className="form-title">Busque um Perfil no GitHub</h1>
+        <input className="form-input" type="text" placeholder="Usuário do GitHub" onBlur={handleChange}/>
+        <button className="form-button" type="submit" >Buscar</button>
+      </form>
+      {nomeUsuario.length>4 && (
+        <>
+          <Perfil nomeUsuario={nomeUsuario}/>
+          <ReposList nomeUsuario={nomeUsuario}/>
+        </>
       )}
-      <button onClick={()=> setFormularioEstaVisivel(!formularioEstaVisivel)} type="button">toggle form</button> */}
     </>
   )
 }

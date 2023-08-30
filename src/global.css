@@ -16,3 +16,36 @@
     --corSecundaria: #111;
 }
 
+.form{
+    text-align: center;
+    padding: 32px;
+    background-color: var(--corPrincipal);
+}
+
+.form-title{
+    font-size: 26px;
+    color: var(--corSecundaria);
+    padding-bottom: 16px;
+}
+
+.form-input{
+    width: 320px;
+    padding: 6px;
+    margin-right: 10px;
+}
+
+.form-button{
+    padding: 8px;
+    background-color: var(--corSecundaria);
+    color: var(--corPrincipal);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    transition: all ease .3s;
+    cursor: pointer
+}
+
+.form-button:hover{
+    background-color: var(--corPrincipal);
+    color: var(--corSecundaria);
+    border: 1px solid var(--corSecundaria);
+}

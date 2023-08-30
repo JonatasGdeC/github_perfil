@@ -1,4 +1,5 @@
 import styles from './Perfil.module.css'
+
 const Perfil = ({nomeUsuario}) =>{
     return (
         <header className={styles.header}>
